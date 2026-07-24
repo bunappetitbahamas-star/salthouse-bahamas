@@ -1,43 +1,24 @@
 # Salt House Bahamas
 
-Website for **Salt House Bahamas** — Chef Harold Pinder, Freeport, Grand Bahama.
+Chef Harold Pinder — Freeport, Grand Bahama  
+Domain: [salthousebahamas.kitchen](https://salthousebahamas.kitchen)
 
-Domain (on Netlify): [salthousebahamas.kitchen](https://salthousebahamas.kitchen)
+## Connect to Netlify (auto-updates)
 
-## Run locally
+1. Open [app.netlify.com](https://app.netlify.com) and sign in
+2. **Add new site** → **Import an existing project** → **GitHub**
+3. Choose **`bunappetitbahamas-star/salthouse-bahamas`**
+4. Build settings (already in `netlify.toml`):
+   - Build command: `npm run build`
+   - Publish directory: `dist`
+5. Deploy
+6. **Domain management** → add **`salthousebahamas.kitchen`** (the domain you already own on Netlify)
+
+After that, every push to `main` rebuilds the live site.
+
+## Local development
 
 ```bash
-cd chef-harold
 npm install
 npm run dev
 ```
-
-## Publish on Netlify (your domain)
-
-You already own `salthousebahamas.kitchen` on Netlify. Connect the site like this:
-
-### Option A — Drag and drop (fastest)
-
-1. On your computer, open the `chef-harold` folder
-2. Run:
-   ```bash
-   npm install
-   npm run build
-   ```
-3. Go to [app.netlify.com](https://app.netlify.com) and sign in
-4. Drag the **`dist`** folder onto the Netlify dashboard (“Add new site” → deploy manually)
-5. After it deploys, open the site → **Domain management**
-6. Click **Add domain** / **Add domain alias**
-7. Enter `salthousebahamas.kitchen` (and `www.salthousebahamas.kitchen` if offered)
-8. Because the domain is already in your Netlify account, it should attach with one click — Netlify handles DNS and HTTPS
-
-### Option B — From GitHub (best long-term)
-
-1. Put this project in a GitHub repo
-2. Netlify → **Add new site** → **Import an existing project**
-3. Pick the repo; build settings are already in `netlify.toml`:
-   - Build command: `npm run build`
-   - Publish directory: `dist`
-4. Then Domain management → add `salthousebahamas.kitchen`
-
-After DNS finishes (often a few minutes), visiting **https://salthousebahamas.kitchen** will open this site.
