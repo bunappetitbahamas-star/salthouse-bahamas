@@ -1,0 +1,77 @@
+:root {
+  --bg: #e4e8e0;
+  --bg-deep: #d5dbd0;
+  --ink: #1a2218;
+  --ink-soft: #3d4a3a;
+  --forest: #1f2e24;
+  --sage: #5f7363;
+  --mist: #f2f4ef;
+  --citrus: #c4a35a;
+  --citrus-deep: #9a7d3a;
+  --line: rgba(26, 34, 24, 0.12);
+
+  --font-display: "Marcellus", Georgia, serif;
+  --font-body: "Figtree", system-ui, sans-serif;
+
+  --space: clamp(1.25rem, 4vw, 2.5rem);
+  --max: 72rem;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  font-weight: 400;
+  color: var(--ink);
+  background:
+    radial-gradient(ellipse 90% 60% at 10% -10%, #f0f3eb 0%, transparent 55%),
+    radial-gradient(ellipse 70% 50% at 100% 20%, #dfe6d8 0%, transparent 50%),
+    linear-gradient(180deg, var(--bg) 0%, var(--bg-deep) 100%);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+::selection {
+  background: var(--forest);
+  color: var(--mist);
+}
